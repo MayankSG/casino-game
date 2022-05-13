@@ -82,7 +82,7 @@ const Casino = () => {
       (item: any) => item?.slotData?.linesCount <= filterline[index]
     );
     filterfeature.forEach((element: any, index: number) => {
-      casino = slots.filter((item: any) =>
+      casino = casino.filter((item: any) =>
         item?.slotData?.tags?.includes(Number(filterfeature[index]))
       );
     return casino;
