@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Header playerdata={playerdata}/>
         <Routes>
-          <Route path="/live" element={<LiveCasino />} />
+          <Route path="/" element={<LiveCasino />} />
           <Route path="/casino" element={<Casino />} />
         </Routes>
       </BrowserRouter>

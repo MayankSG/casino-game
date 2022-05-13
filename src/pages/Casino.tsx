@@ -26,7 +26,7 @@ const Casino = () => {
     };
     apicall();
   }, []);
-
+console.log('akash',filterfeature,filterline);
   const handleclick = (client: any, host: any, token: any) => {
     window.open(
       `${host}?gameToken=${token}&operatorToken=654be709f71140f7aa65dcd8cede80d4&playerToken=Player777&host=${client}`

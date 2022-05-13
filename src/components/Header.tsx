@@ -16,7 +16,7 @@ const Header = (props:IMyProps) => {
           </div>  
           <ul className="nav nav-tabs justify-content-center" role="tablist">
             <li className="nav-item">
-              <Link to="/live" className="nav-link text-uppercase rounded-0 " data-toggle="tab">Live Casino</Link>
+              <Link to="/" className="nav-link text-uppercase rounded-0 " data-toggle="tab">Live Casino</Link>
             </li>
             <li className="nav-item">
               <Link to="/casino" className="nav-link text-uppercase rounded-0 " data-toggle="tab" >Casino</Link>
