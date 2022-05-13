@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Casino from "./pages/Casino";
+import LiveCasino from "./pages/LiveCasino";
 function App() {
+  const [playerdata,setPlayerData]=useState<any>({})
+  useEffect(() => {
+   const apicall=()=>{
+       axios.get('https://dev-gateway.7mojos.com/api/lobby/player?playerToken=Player777&operatorToken=654be709f71140f7aa65dcd8cede80d4&currency=USD&type=any').
+       then((res : any)=>setPlayerData(res.data))
+   }
+   apicall()
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header playerdata={playerdata}/>
+        <Routes>
+          <Route path="/live" element={<LiveCasino />} />
+          <Route path="/casino" element={<Casino />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

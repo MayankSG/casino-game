@@ -1,38 +1,138 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filter-sec {
+    padding: 10px;
+    background-color: #17141f;
+    border-top: 5px solid #291e3c;
+    margin: 20px 0 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.filter-btn {
+  padding: 7px 30px;
+  height: 40px;
+  border: 1px solid #ff2b9f;
+  background-color: transparent;
+  color: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.filter-btn img {
+  margin-left: 7px;
+  height: 10px;
+  transition: all .4s;
 }
-
-.App-link {
-  color: #61dafb;
+.filter-open {
+  background-color: #ff2b9f;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-open img {
+  transform: rotate(-180deg);
+}
+.img-box{
+  padding: 1px;
+  position: relative;
+  background: #ffe115;
+  background: linear-gradient(#ffe115,#e70c78);
+  margin: 0 0 14px;
+  transition: all .3s linear;
+  overflow: hidden;
+  height: 160px;
+}
+.img-box img {
+  height: 100%;
+  transition: all .5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.img-box:hover {
+  background: linear-gradient(#ffe115,#e70c78);
+}
+.img-box:hover img {
+  transform: scale(1.08);
+}
+.badge {
+  top: 5px;
+  right: 10px;
+}
+.badges {
+  background-color: #17141f;
+    border: 1px solid #e70c77;
+    border-radius: 0;
+    padding: 2px 4px;
+    display: table;
+    margin: 0 0 3px auto;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #fff;
+    -webkit-filter: drop-shadow(0 0 20px rgba(101,40,193,.5));
+    filter: drop-shadow(0 0 20px rgba(101,40,193,.5));
+    opacity: .8;
+}
+.badges .pink {
+  background: -webkit-linear-gradient(#f7f7f7,#e2b4b4 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.badges .yellow {
+  background: -webkit-linear-gradient(#ed7c31,#fcc403 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.badges .green {
+  background: -webkit-linear-gradient(#1c4c0d,#6fd017 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.spinner-logo img {
+  height: 75px;
+  width: 75px;
+}
+.spinner-logo .spinner-border {
+  height: 130px;
+  width: 130px;
+  border-width: 10px;
+  animation: 1s linear infinite spinner-border;
+}
+.info-box {
+  padding: 1px;
+  background: #ffe115;
+  background: linear-gradient(#ffe115,#e70c78);
+}
+.info-bg {
+  background-color: #17141f;
+}
+.player-txt {
+  color: #8e70d4;
+}
+.home-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  min-height: 450px;
+}
+.home-inner {
+  position: relative;
+}
+.home-inner:nth-child(3) .img-box2  {
+  height: auto;
+}
+.home-inner:nth-child(4) {
+  position: absolute;
+    top: 215px;
+    left: 33%;
+}
+.home-inner:nth-child(4) .img-box2 {
+  top: 0;
+    left: 0px;
+    height: 215px;
+    position: relative;
+    width: 100%;
+}
+.img-box2, .img-box2:hover {
+  background: none;
+  height: 100%;
+}
+.img-box2 img {
+  width: 90%;
+  background: transparent;
 }

@@ -1,13 +1,46 @@
-body {
+html body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #17141F ;
+  opacity: 1;
+  background: url('/home/dell/7mozos/public/background.svg')  center center fixed #17141F;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.head-tabs .nav-tabs {
+  border-bottom: 1px solid #b87821;
+}
+.head-tabs .nav-tabs .nav-item .nav-link {
+  color: #EEB309;
+  font-weight: bold;
+  border: 1px solid #b87821;
+}
+.head-tabs .nav-tabs .nav-item .nav-link.active {
+  color: #FFF;
+  background-color: #201531;
+  border-bottom: 1px solid transparent;
+}
+.bg-blue {
+  background-color: #1F1530;
+  border-top: 4px solid #291E3D;
+  border-bottom: 4px solid #291E3D;
+}
+.head-tabs h5 small {
+  font-size: 14px;
+}
+.head-tabs h5 {
+  color: #EEB309;
+}
+.head-tabs img.logo {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  top: -8px;
 }
