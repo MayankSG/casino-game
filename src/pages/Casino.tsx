@@ -26,7 +26,7 @@ const Casino = () => {
     };
     apicall();
   }, []);
-console.log('akash',filterfeature,filterline);
+
   const handleclick = (client: any, host: any, token: any) => {
     window.open(
       `${host}?gameToken=${token}&operatorToken=654be709f71140f7aa65dcd8cede80d4&playerToken=Player777&host=${client}`
@@ -82,7 +82,7 @@ console.log('akash',filterfeature,filterline);
       (item: any) => item?.slotData?.linesCount <= filterline[index]
     );
     filterfeature.forEach((element: any, index: number) => {
-      casino = casino.filter((item: any) =>
+      casino = slots.filter((item: any) =>
         item?.slotData?.tags?.includes(Number(filterfeature[index]))
       );
     return casino;
@@ -327,7 +327,7 @@ console.log('akash',filterfeature,filterline);
                               <div className="img-box">
                                 <img
                                   className="img-fluid rounded-3"
-                                  src={slot.thumbnails[0].imageUrl}
+                                  src={slot?.thumbnails[0]?.imageUrl}
                                   alt="image"
                                   title={slots[index].name}
                                 />
