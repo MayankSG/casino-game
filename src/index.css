@@ -7,7 +7,7 @@ html body {
   -moz-osx-font-smoothing: grayscale;
   background: #17141F ;
   opacity: 1;
-  background: url('/home/dell/7mozos/public/background.svg')  center center fixed #17141F;
+  background: url('../public/background.svg')  center center fixed #17141F;
 }
 
 code {
